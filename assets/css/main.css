@@ -1054,6 +1054,29 @@ input, select, textarea {
 						}
 
 		}
+ 
+/* Stakeholder Roman numeral list */
+.roman-list {
+    list-style: none !important;
+    counter-reset: stakeholder-counter;
+    padding-left: 3em !important;
+    margin-bottom: 1.5em;
+}
+
+.roman-list li {
+    counter-increment: stakeholder-counter;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+.roman-list li::before {
+    content: "(" counter(stakeholder-counter, lower-roman) ")";
+    position: absolute;
+    right: 100%;
+    margin-right: 0.5em;
+    white-space: nowrap;
+}
+
 
 		@media screen and (max-width: 980px) {
 
